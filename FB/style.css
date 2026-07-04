@@ -1,0 +1,482 @@
+/* ==========================================================================
+   Divine Tamil Nadu - Main Stylesheet
+   ========================================================================== */
+
+/* Theme Variables */
+:root {
+  --primary-color: #8B0000;       /* Temple Red */
+  --secondary-color: #FF9933;     /* Saffron */
+  --accent-color: #FFD700;        /* Golden */
+  --bg-color: #FDFBF6;            /* Warm Off-white / Cream */
+  --text-dark: #2C2C2C;           /* Charcoal */
+  --text-light: #FDFBF6;
+  --card-bg: #FFFFFF;
+  --shadow-sm: 0 4px 10px rgba(139, 0, 0, 0.05);
+  --shadow-md: 0 10px 25px rgba(139, 0, 0, 0.1);
+  --shadow-lg: 0 15px 35px rgba(139, 0, 0, 0.15);
+  --font-primary: 'Poppins', sans-serif;
+  --font-secondary: 'Cinzel', serif;
+  --transition-smooth: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  --border-radius-custom: 16px;
+}
+
+/* Dark Theme Variables */
+body.dark-theme {
+  --primary-color: #5A0000;
+  --secondary-color: #E68019;
+  --accent-color: #ECC000;
+  --bg-color: #120A0A;            /* Dark Temple Bronze */
+  --text-dark: #F5E6D3;           /* Warm Sand Text */
+  --card-bg: #201313;             /* Dark Card Background */
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 15px 40px rgba(0, 0, 0, 0.5);
+  background-color: var(--bg-color);
+  color: var(--text-dark);
+}
+
+/* General Resets */
+body {
+  font-family: var(--font-primary);
+  background-color: var(--bg-color);
+  color: var(--text-dark);
+  transition: var(--transition-smooth);
+  overflow-x: hidden;
+}
+
+.font-secondary {
+  font-family: var(--font-secondary);
+}
+
+/* Colors Utilities */
+.text-warning-light {
+  color: #FFE4B5 !important;
+}
+
+.bg-cream {
+  background-color: #F8F5EE;
+}
+body.dark-theme .bg-cream {
+  background-color: #1A0F0F;
+}
+
+.bg-danger-light { background-color: rgba(220, 53, 69, 0.1); }
+.bg-warning-light { background-color: rgba(255, 193, 7, 0.15); }
+.bg-orange-light { background-color: rgba(255, 153, 51, 0.15); }
+.bg-amber-light { background-color: rgba(255, 215, 0, 0.15); }
+
+.text-orange {
+  color: #FF9933 !important;
+}
+.text-amber {
+  color: #FFD700 !important;
+}
+
+/* Custom Spacing */
+.max-width-700 { max-width: 700px; }
+.max-width-600 { max-width: 600px; }
+.max-width-500 { max-width: 500px; }
+
+.fs-7 { font-size: 0.95rem; }
+.fs-8 { font-size: 0.85rem; }
+.fs-9 { font-size: 0.75rem; }
+
+/* Custom Gradient Class */
+.bg-gradient-custom {
+  background: linear-gradient(135deg, var(--primary-color) 0%, #B22222 100%);
+  border-bottom: 3px solid var(--accent-color);
+}
+
+/* Announcement Bar */
+.announcement-bar {
+  background-color: #600000;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+/* Sticky Navbar Custom Style */
+.navbar {
+  background-color: rgba(139, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid var(--accent-color);
+  transition: var(--transition-smooth);
+}
+
+.navbar.scrolled {
+  background-color: rgba(100, 0, 0, 0.98);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+body.dark-theme .navbar {
+  background-color: rgba(32, 19, 19, 0.95);
+}
+
+.logo-text {
+  font-family: var(--font-secondary);
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  background: linear-gradient(135deg, #FFF 0%, var(--accent-color) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-link {
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-size: 0.85rem;
+  transition: var(--transition-smooth);
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-color);
+  transition: var(--transition-smooth);
+  transform: translateX(-50%);
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--accent-color) !important;
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+  width: 70%;
+}
+
+/* Hero Section */
+.hero-section {
+  height: 90vh;
+  min-height: 600px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.hero-title {
+  font-family: var(--font-secondary);
+  font-weight: 900;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+.hero-sub {
+  font-weight: 300;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+.text-shadow-sm {
+  text-shadow: 1px 1px 2px rgba(139, 0, 0, 0.2);
+}
+
+/* Glassmorphism Search Container */
+.bg-white-glass {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+}
+body.dark-theme .bg-white-glass {
+  background: rgba(32, 19, 19, 0.95);
+  border-color: rgba(255, 215, 0, 0.4);
+}
+
+.btn-search {
+  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+  color: #000 !important;
+  border: none;
+  font-weight: 600;
+}
+.btn-search:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 153, 51, 0.4);
+}
+
+/* Category Circle Cards */
+.category-card {
+  border: 1px solid rgba(139, 0, 0, 0.1);
+  background-color: var(--card-bg) !important;
+  transition: var(--transition-smooth);
+  cursor: pointer;
+}
+
+.category-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--secondary-color);
+  box-shadow: var(--shadow-md) !important;
+}
+
+.category-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+}
+
+.category-card:hover .category-icon {
+  transform: rotate(15deg) scale(1.1);
+}
+
+/* Pre-heading and titles */
+.pre-heading {
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.section-title {
+  color: var(--text-dark);
+}
+
+.title-divider {
+  width: 80px;
+  height: 4px;
+  border-radius: 2px;
+  margin-top: 15px;
+}
+
+/* God Card Custom Layout */
+.god-card, .temple-card {
+  background-color: var(--card-bg) !important;
+  border-color: rgba(139,0,0,0.06);
+  transition: var(--transition-smooth);
+}
+
+.god-card-img-wrap, .card-img-wrap {
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+}
+
+.god-img, .temple-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-smooth);
+}
+
+.god-card:hover .god-img, .temple-card:hover .temple-img {
+  transform: scale(1.08);
+}
+
+.god-card:hover, .temple-card:hover {
+  transform: translateY(-10px) scale(1.01);
+  box-shadow: var(--shadow-lg) !important;
+  border-color: rgba(255, 153, 51, 0.3);
+}
+
+.text-truncate-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+
+/* Counter & Stats Section styles */
+.stat-item {
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-item:last-child {
+  border-right: none;
+}
+
+@media (max-width: 768px) {
+  .stat-item {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 20px;
+  }
+  .stat-item:last-child {
+    border-bottom: none;
+  }
+}
+
+.gradient-accent-dots {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(rgba(255, 215, 0, 0.15) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Festival Section */
+.festival-icon-wrap {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+}
+
+.card:hover .festival-icon-wrap {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+/* Testimonial styling */
+.testimonial-card {
+  background-color: var(--card-bg) !important;
+  border-left: 5px solid var(--secondary-color) !important;
+  transition: var(--transition-smooth);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md) !important;
+}
+
+.opacity-2 {
+  opacity: 0.08;
+}
+
+/* Footer style overrides */
+footer {
+  background-color: #1a0808 !important;
+  border-top: 4px solid var(--secondary-color);
+}
+
+.footer-links a {
+  transition: var(--transition-smooth);
+}
+
+.footer-links a:hover {
+  color: var(--secondary-color) !important;
+  padding-left: 5px;
+}
+
+.footer-contacts li i {
+  width: 20px;
+}
+
+/* Search Suggestions List UI */
+.suggestions-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: var(--card-bg);
+  border: 1px solid rgba(139, 0, 0, 0.1);
+  max-height: 300px;
+  overflow-y: auto;
+  padding-left: 0;
+  list-style: none;
+  text-align: left;
+}
+
+.suggestions-list li {
+  padding: 12px 20px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  transition: var(--transition-smooth);
+}
+
+.suggestions-list li:hover {
+  background-color: rgba(255, 153, 51, 0.1);
+  color: var(--primary-color);
+}
+
+/* Smart Modal Styles */
+.pointer-badge {
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+.pointer-badge:hover {
+  background-color: var(--secondary-color) !important;
+  color: white !important;
+}
+
+/* Custom Scroll animations */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards ease-out;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+.delay-4 { animation-delay: 0.8s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-8px);
+  }
+  60% {
+    transform: translateY(-4px);
+  }
+}
+
+.fa-spin-slow {
+  animation: fa-spin 12s infinite linear;
+}
+
+/* Interactive elements overrides */
+.form-control, .form-select {
+  border-radius: 8px;
+  padding: 10px 15px;
+  border: 1px solid rgba(139, 0, 0, 0.15);
+  background-color: var(--card-bg);
+  color: var(--text-dark);
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 8px rgba(255, 153, 51, 0.25);
+  background-color: var(--card-bg);
+  color: var(--text-dark);
+}
+
+body.dark-theme .form-control, body.dark-theme .form-select {
+  background-color: #2D1B1B;
+  border-color: rgba(255, 215, 0, 0.2);
+  color: #F5E6D3;
+}
+
+body.dark-theme .form-control:focus, body.dark-theme .form-select:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
+}
+
+.btn-close {
+  filter: var(--btn-close-filter, none);
+}
+
+body.dark-theme .btn-close {
+  filter: invert(1) grayscale(1) brightness(2);
+}

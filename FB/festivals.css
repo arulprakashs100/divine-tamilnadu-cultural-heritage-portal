@@ -1,0 +1,64 @@
+/* ==========================================================================
+   Divine Tamil Nadu - Festivals Page Styles
+   ========================================================================== */
+
+.filter-sidebar {
+  background-color: var(--card-bg) !important;
+  border-color: rgba(139, 0, 0, 0.08) !important;
+  transition: var(--transition-smooth);
+}
+
+/* Category Filter Buttons */
+.btn-filter {
+  border: 1px solid rgba(139, 0, 0, 0.1);
+  background-color: transparent;
+  color: var(--text-dark);
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: var(--transition-smooth);
+}
+
+.btn-filter:hover {
+  background-color: rgba(255, 153, 51, 0.12);
+  color: var(--primary-color);
+  border-color: var(--secondary-color);
+  padding-left: 20px;
+}
+
+.btn-filter.active {
+  background-color: var(--primary-color) !important;
+  color: var(--accent-color) !important;
+  border-color: var(--primary-color);
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(139, 0, 0, 0.2);
+}
+
+body.dark-theme .btn-filter.active {
+  background-color: var(--accent-color) !important;
+  color: #000 !important;
+  border-color: var(--accent-color);
+}
+
+.festival-icon-wrap {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+}
+
+.card:hover .festival-icon-wrap {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+.text-danger-light-dark {
+  color: var(--primary-color);
+}
+body.dark-theme .text-danger-light-dark {
+  color: var(--secondary-color);
+}
+.page-header {
+  border-bottom: 3px solid var(--accent-color);
+}

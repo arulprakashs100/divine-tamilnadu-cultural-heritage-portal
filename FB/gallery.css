@@ -1,0 +1,92 @@
+/* ==========================================================================
+   Divine Tamil Nadu - Gallery Page Styles
+   ========================================================================== */
+
+/* Filter Tabs */
+.btn-gallery-filter {
+  background-color: var(--card-bg);
+  border: 1px solid rgba(139, 0, 0, 0.2);
+  color: var(--text-dark);
+  transition: var(--transition-smooth);
+}
+
+.btn-gallery-filter:hover {
+  background-color: rgba(255, 153, 51, 0.15);
+  color: var(--primary-color);
+  border-color: var(--secondary-color);
+}
+
+.btn-gallery-filter.active {
+  background-color: var(--primary-color) !important;
+  color: var(--accent-color) !important;
+  border-color: var(--primary-color);
+  box-shadow: 0 4px 10px rgba(139, 0, 0, 0.2);
+}
+
+body.dark-theme .btn-gallery-filter.active {
+  background-color: var(--accent-color) !important;
+  color: #000 !important;
+  border-color: var(--accent-color);
+}
+
+/* Gallery Images Grid */
+.gallery-card-item {
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+  border-radius: var(--border-radius-custom);
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(139, 0, 0, 0.05);
+  transition: var(--transition-smooth);
+}
+
+.gallery-card-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-smooth);
+}
+
+.gallery-hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(139, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.3) 100%);
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  transition: var(--transition-smooth);
+}
+
+.gallery-card-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-card-item:hover .gallery-hover-overlay {
+  opacity: 1;
+}
+
+.gallery-card-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--secondary-color);
+}
+
+/* Lightbox Modal */
+.max-height-85vh {
+  max-height: 75vh;
+  object-fit: contain;
+}
+
+.bg-dark-glass {
+  background-color: rgba(26, 8, 8, 0.95);
+  border-top: 2px solid var(--accent-color);
+}
+.page-header {
+  border-bottom: 3px solid var(--accent-color);
+}

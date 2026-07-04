@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us – Divine Tamil Nadu Portal</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="about.css">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar py-2 text-center text-white text-uppercase">
+    <span><i class="fa-solid fa-om me-2"></i> About our Mission – Preserving Heritage digitally <i class="fa-solid fa-om ms-2"></i></span>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="mainNavbar">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <i class="fa-solid fa-dharmachakra fa-spin-slow me-2 text-warning fs-3"></i>
+        <div class="d-inline-block">
+          <span class="brand-title d-block logo-text">DIVINE TAMIL NADU</span>
+          <span class="brand-sub pt-0 d-block fs-8 text-warning text-uppercase">Temples & Gods Portal</span>
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-uppercase">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="gods.html">Gods</a></li>
+          <li class="nav-item"><a class="nav-link" href="temples.html">Temples</a></li>
+          <li class="nav-item"><a class="nav-link" href="festivals.html">Festivals</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-3">
+          <button class="btn btn-outline-warning btn-sm border-0" data-bs-toggle="modal" data-bs-target="#searchModal" title="Smart Search">
+            <i class="fa-solid fa-magnifying-glass fs-5"></i>
+          </button>
+          <button class="btn btn-outline-warning btn-sm border-0" id="themeToggle" title="Toggle Theme">
+            <i class="fa-solid fa-moon fs-5"></i>
+          </button>
+
+          <div class="dropdown">
+            <button class="btn btn-outline-warning btn-sm dropdown-toggle text-uppercase" type="button" id="languageMenu" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-globe me-1"></i> <span id="current-lang">EN</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="languageMenu" id="lang-dropdown">
+              <li><a class="dropdown-item active" href="#" data-lang="en">English</a></li>
+              <li><a class="dropdown-item" href="#" data-lang="ta">தமிழ் (Tamil)</a></li>
+              <li><a class="dropdown-item" href="#" data-lang="hi">हिन्दी (Hindi)</a></li>
+            </ul>
+          </div>
+
+          <button class="btn btn-warning btn-sm px-3 rounded-pill fw-semibold text-uppercase" id="loginBtn" data-bs-toggle="modal" data-bs-target="#loginModal">
+            <i class="fa-solid fa-user-circle me-1"></i> Login
+          </button>
+          <a href="admin.html" class="btn btn-outline-light btn-sm d-none d-xl-inline-block" id="adminShortcut" title="Admin Dashboard">
+            <i class="fa-solid fa-gauge"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header py-5 text-center text-white position-relative" style="background-image: linear-gradient(rgba(139,0,0,0.6), rgba(44,44,44,0.85)), url('assets/images/temple_hero.png'); background-position: center; background-size: cover;">
+    <div class="container py-4 position-relative z-2">
+      <h1 class="display-4 fw-bold font-secondary text-shadow">Spiritual Heritage & Project Overview</h1>
+      <p class="lead max-width-700 mx-auto text-warning-light fs-6">Preserving and sharing the divine legacy, legendary histories, and architecture of Tamil Nadu's Hindu temples.</p>
+    </div>
+  </section>
+
+  <!-- About Project Details -->
+  <section class="py-5 text-dark text-start">
+    <div class="container">
+      <div class="row g-5">
+        <!-- Main Content -->
+        <div class="col-lg-8">
+          <div class="mb-5">
+            <h3 class="fw-bold font-secondary text-dark border-bottom pb-2 mb-3">Our Mission & Vision</h3>
+            <p class="text-muted fs-7 lh-lg">Tamil Nadu, often referred to as the <i>Land of Temples</i>, houses over 38,000 active temples. Each structure contains detailed histories, architectural wonders, and legendary mythological connections. The **Divine Tamil Nadu** portal is a digital heritage preservation platform built to document these details, serving pilgrims, tourists, students, and culture researchers worldwide.</p>
+            <p class="text-muted fs-7 lh-lg">Our vision is to build an interactive, community-driven database where correct, authentic details about deity iconography, temple history, visiting coordinates, and active local festivals are preserved, validated by administrators, and shared globally.</p>
+          </div>
+
+          <div class="mb-5">
+            <h3 class="fw-bold font-secondary text-dark border-bottom pb-2 mb-3">Key Project Objectives</h3>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="p-3 bg-white border shadow-sm rounded-3">
+                  <h6 class="fw-bold text-danger"><i class="fa-solid fa-book-bookmark me-2"></i> Preserve Mythology</h6>
+                  <p class="text-muted fs-8 mb-0">Provide complete references to Hindu scriptures, Avatars, weapons, and sacred mantras for each deity.</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="p-3 bg-white border shadow-sm rounded-3">
+                  <h6 class="fw-bold text-warning"><i class="fa-solid fa-map-location me-2"></i> Guide Pilgrims</h6>
+                  <p class="text-muted fs-8 mb-0">Help tourists plan temple yatras by providing accurate timings, strict dress codes, and directions.</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="p-3 bg-white border shadow-sm rounded-3">
+                  <h6 class="fw-bold text-success"><i class="fa-solid fa-users-viewfinder me-2"></i> Community Preserves</h6>
+                  <p class="text-muted fs-8 mb-0">Allow registered devotees to submit missing local temple logs and legends for admin approval.</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="p-3 bg-white border shadow-sm rounded-3">
+                  <h6 class="fw-bold text-primary"><i class="fa-solid fa-language me-2"></i> Global Reach</h6>
+                  <p class="text-muted fs-8 mb-0">Support translation tools to bridge the language barrier for international heritage tourists.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar User Privilege Guide -->
+        <div class="col-lg-4">
+          <div class="p-4 bg-white border shadow-sm rounded-4">
+            <h5 class="fw-bold font-secondary text-dark mb-3 border-bottom pb-2">User Privileges</h5>
+            
+            <div class="d-flex gap-3 mb-3 border-bottom pb-3">
+              <i class="fa-solid fa-eye text-primary fs-3"></i>
+              <div>
+                <h6 class="fw-bold mb-0">Guest User</h6>
+                <small class="text-muted fs-9">Default access mode. Can search deities, temples, view galleries, read histories, and translate pages.</small>
+              </div>
+            </div>
+
+            <div class="d-flex gap-3 mb-3 border-bottom pb-3">
+              <i class="fa-solid fa-circle-user text-warning fs-3"></i>
+              <div>
+                <h6 class="fw-bold mb-0">Registered User</h6>
+                <small class="text-muted fs-9">Requires Name, Mobile, and Role selection. Can track contributions, submit feedback, and save favorites.</small>
+              </div>
+            </div>
+
+            <div class="d-flex gap-3">
+              <i class="fa-solid fa-user-shield text-danger fs-3"></i>
+              <div>
+                <h6 class="fw-bold mb-0">Administrator</h6>
+                <small class="text-muted fs-9">Authorized staff. Manages content parameters, uploads images, and approves or rejects community submissions.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shared Search Modal -->
+  <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content bg-cream border-0 rounded-4">
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title fw-bold text-dark font-secondary" id="searchModalLabel"><i class="fa-solid fa-magnifying-glass me-2 text-warning"></i>Smart Portal Search</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="input-group mb-3 border rounded-pill overflow-hidden bg-white">
+            <span class="input-group-text bg-white border-0 px-3"><i class="fa-solid fa-magnifying-glass text-muted"></i></span>
+            <input type="text" class="form-control border-0 py-3 shadow-none text-dark" placeholder="Type key words..." id="modalSearchInput" autocomplete="off">
+            <button class="btn btn-warning px-4 text-dark fw-bold" onclick="handleModalSearch()">Search</button>
+          </div>
+          <div class="search-results-box rounded-3 bg-white p-3 border d-none" id="searchResultsBox">
+            <h6 class="border-bottom pb-2 fw-semibold text-muted mb-3 fs-8">Search Results:</h6>
+            <div id="modalSearchResults"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Login Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-cream border-0 rounded-4 shadow-lg overflow-hidden">
+        <!-- Auth logic is initialized by main script -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white pt-5 pb-3">
+    <div class="container text-center">
+      <p class="mb-0 fs-9 text-muted">&copy; 2026 Divine Tamil Nadu. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom Script Dependencies -->
+  <script src="script.js"></script>
+</body>
+</html>

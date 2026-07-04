@@ -1,0 +1,94 @@
+/* ==========================================================================
+   Divine Tamil Nadu - Gods Listing Page Styles
+   ========================================================================== */
+
+.filter-sidebar {
+  background-color: var(--card-bg) !important;
+  border-color: rgba(139, 0, 0, 0.08) !important;
+  transition: var(--transition-smooth);
+}
+
+/* Category Filter Buttons */
+.btn-filter {
+  border: 1px solid rgba(139, 0, 0, 0.1);
+  background-color: transparent;
+  color: var(--text-dark);
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: var(--transition-smooth);
+}
+
+.btn-filter:hover {
+  background-color: rgba(255, 153, 51, 0.12);
+  color: var(--primary-color);
+  border-color: var(--secondary-color);
+  padding-left: 20px; /* Slight slide in effect */
+}
+
+.btn-filter.active {
+  background-color: var(--primary-color) !important;
+  color: var(--accent-color) !important;
+  border-color: var(--primary-color);
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(139, 0, 0, 0.2);
+}
+
+body.dark-theme .btn-filter.active {
+  background-color: var(--accent-color) !important;
+  color: #000 !important;
+  border-color: var(--accent-color);
+}
+
+/* Custom list items inside sidebar */
+.pointer-badge {
+  font-size: 0.75rem;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+/* God Card Custom Sizing for list page */
+.god-list-card {
+  transition: var(--transition-smooth);
+}
+
+.god-list-card .card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Pagination Overrides */
+.pagination .page-link {
+  color: var(--primary-color);
+  border-color: rgba(139, 0, 0, 0.1);
+  background-color: var(--card-bg);
+  padding: 10px 18px;
+  font-weight: 500;
+  transition: var(--transition-smooth);
+}
+
+.pagination .page-link:hover {
+  background-color: rgba(255, 153, 51, 0.15);
+  color: var(--primary-color);
+  border-color: var(--secondary-color);
+}
+
+.pagination .page-item.active .page-link {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--accent-color);
+}
+
+body.dark-theme .pagination .page-item.active .page-link {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: #000;
+}
+
+body.dark-theme .pagination .page-link {
+  border-color: rgba(255, 215, 0, 0.1);
+}
+
+/* Page Header animation */
+.page-header {
+  border-bottom: 3px solid var(--accent-color);
+}

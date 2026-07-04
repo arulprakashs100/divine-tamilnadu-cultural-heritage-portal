@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deities of Tamil Nadu – Divine Pantheon</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="gods.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar py-2 text-center text-white text-uppercase">
+    <span><i class="fa-solid fa-om me-2"></i> Explore the Legendary Deities and Mythologies <i class="fa-solid fa-om ms-2"></i></span>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="mainNavbar">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <i class="fa-solid fa-dharmachakra fa-spin-slow me-2 text-warning fs-3"></i>
+        <div class="d-inline-block">
+          <span class="brand-title d-block logo-text">DIVINE TAMIL NADU</span>
+          <span class="brand-sub pt-0 d-block fs-8 text-warning text-uppercase">Temples & Gods Portal</span>
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-uppercase">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="gods.html">Gods</a></li>
+          <li class="nav-item"><a class="nav-link" href="temples.html">Temples</a></li>
+          <li class="nav-item"><a class="nav-link" href="festivals.html">Festivals</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-3">
+          <button class="btn btn-outline-warning btn-sm border-0" data-bs-toggle="modal" data-bs-target="#searchModal" title="Smart Search">
+            <i class="fa-solid fa-magnifying-glass fs-5"></i>
+          </button>
+          
+          <button class="btn btn-outline-warning btn-sm border-0" id="themeToggle" title="Toggle Theme">
+            <i class="fa-solid fa-moon fs-5"></i>
+          </button>
+
+          <div class="dropdown">
+            <button class="btn btn-outline-warning btn-sm dropdown-toggle text-uppercase" type="button" id="languageMenu" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-globe me-1"></i> <span id="current-lang">EN</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="languageMenu" id="lang-dropdown">
+              <li><a class="dropdown-item active" href="#" data-lang="en">English</a></li>
+              <li><a class="dropdown-item" href="#" data-lang="ta">தமிழ் (Tamil)</a></li>
+              <li><a class="dropdown-item" href="#" data-lang="hi">हिन्दी (Hindi)</a></li>
+              <li><a class="dropdown-item" href="#" data-lang="te">తెలుగు (Telugu)</a></li>
+              <li><a class="dropdown-item" href="#" data-lang="kn">ಕನ್ನಡ (Kannada)</a></li>
+              <li><a class="dropdown-item" href="#" data-lang="ml">മലയാളം (Malayalam)</a></li>
+              <li><a class="dropdown-item" href="#" data-lang="fr">Français (French)</a></li>
+              <li><a class="dropdown-item" href="#" data-lang="de">Deutsch (German)</a></li>
+              <li><a class="dropdown-item" href="#" data-lang="ja">日本語 (Japanese)</a></li>
+              <li><a class="dropdown-item" href="#" data-lang="zh">中文 (Chinese)</a></li>
+            </ul>
+          </div>
+
+          <button class="btn btn-warning btn-sm px-3 rounded-pill fw-semibold text-uppercase" id="loginBtn" data-bs-toggle="modal" data-bs-target="#loginModal">
+            <i class="fa-solid fa-user-circle me-1"></i> Login
+          </button>
+          
+          <a href="admin.html" class="btn btn-outline-light btn-sm d-none d-xl-inline-block" id="adminShortcut" title="Admin Dashboard">
+            <i class="fa-solid fa-gauge"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header py-5 text-center text-white position-relative" style="background-image: linear-gradient(rgba(139,0,0,0.6), rgba(44,44,44,0.85)), url('assets/images/temple_hero.png'); background-position: center; background-size: cover;">
+    <div class="container py-4 position-relative z-2">
+      <h1 class="display-4 fw-bold font-secondary text-shadow">Divine Deities & Mythology</h1>
+      <p class="lead max-width-700 mx-auto text-warning-light fs-6">Delve into the avatars, sacred symbols, historic scriptures, and temple abodes of Hindu Gods and Goddesses.</p>
+    </div>
+  </section>
+
+  <!-- Main Grid & Filters Content -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Filter Sidebar -->
+        <div class="col-lg-3">
+          <div class="filter-sidebar p-4 bg-white shadow-sm rounded-4 border">
+            <h5 class="fw-bold font-secondary text-dark border-bottom pb-2 mb-3">
+              <i class="fa-solid fa-sliders text-warning me-2"></i>Filter Deities
+            </h5>
+            
+            <!-- Local Search Box -->
+            <div class="mb-4">
+              <label class="form-label text-muted fs-8 fw-semibold">Search by Name</label>
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search deity..." id="godSearchBox">
+                <span class="input-group-text bg-warning text-dark border-0"><i class="fa-solid fa-search"></i></span>
+              </div>
+            </div>
+
+            <!-- Categories Filter -->
+            <div class="mb-4">
+              <label class="form-label text-muted fs-8 fw-semibold">Deity Category</label>
+              <div class="d-flex flex-column gap-2" id="godCategoryFilterGroup">
+                <button class="btn btn-filter active text-start px-3 py-2 rounded-3" data-category="All">
+                  <i class="fa-solid fa-circle-nodes me-2"></i> All Deities
+                </button>
+                <button class="btn btn-filter text-start px-3 py-2 rounded-3" data-category="Shiva">
+                  <i class="fa-solid fa-trident me-2 text-danger"></i> Shiva (Shaivism)
+                </button>
+                <button class="btn btn-filter text-start px-3 py-2 rounded-3" data-category="Vishnu">
+                  <i class="fa-solid fa-conch me-2 text-warning"></i> Vishnu (Vaishnavism)
+                </button>
+                <button class="btn btn-filter text-start px-3 py-2 rounded-3" data-category="Murugan">
+                  <i class="fa-solid fa-feather-pointed me-2 text-orange"></i> Lord Murugan
+                </button>
+                <button class="btn btn-filter text-start px-3 py-2 rounded-3" data-category="Vinayagar">
+                  <i class="fa-solid fa-om me-2 text-amber"></i> Lord Vinayagar
+                </button>
+                <button class="btn btn-filter text-start px-3 py-2 rounded-3" data-category="Parvati">
+                  <i class="fa-solid fa-spa me-2 text-danger"></i> Goddess Parvati
+                </button>
+                <button class="btn btn-filter text-start px-3 py-2 rounded-3" data-category="Lakshmi">
+                  <i class="fa-solid fa-coins me-2 text-warning"></i> Goddess Lakshmi
+                </button>
+                <button class="btn btn-filter text-start px-3 py-2 rounded-3" data-category="Saraswati">
+                  <i class="fa-solid fa-graduation-cap me-2 text-info"></i> Goddess Saraswati
+                </button>
+                <button class="btn btn-filter text-start px-3 py-2 rounded-3" data-category="Kali">
+                  <i class="fa-solid fa-skull me-2 text-dark"></i> Goddess Kali
+                </button>
+                <button class="btn btn-filter text-start px-3 py-2 rounded-3" data-category="Navagraha">
+                  <i class="fa-solid fa-sun me-2 text-warning"></i> Navagrahas
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gods Grid Column -->
+        <div class="col-lg-9">
+          <!-- Top sorting and status bar -->
+          <div class="d-flex justify-content-between align-items-center mb-4 p-3 bg-white border rounded-3 shadow-sm">
+            <span class="text-muted fs-8" id="godCountText">Showing 0 deities</span>
+            <div class="d-flex align-items-center gap-2">
+              <label class="text-nowrap fs-8 text-muted mb-0">Sort By:</label>
+              <select class="form-select form-select-sm" id="godSortOption">
+                <option value="name-asc">Alphabetical (A-Z)</option>
+                <option value="name-desc">Alphabetical (Z-A)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Gods Grid Container -->
+          <div class="row g-4" id="godsListingGrid">
+            <!-- Populated via gods.js -->
+          </div>
+
+          <!-- Pagination -->
+          <nav class="mt-5" aria-label="Gods navigation">
+            <ul class="pagination justify-content-center" id="godsPagination">
+              <!-- Populated via gods.js -->
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white pt-5 pb-3">
+    <div class="container">
+      <div class="row g-4 mb-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="d-flex align-items-center mb-3">
+            <i class="fa-solid fa-dharmachakra text-warning fs-3 me-2"></i>
+            <h4 class="font-secondary fw-bold text-warning mb-0 logo-text">DIVINE TAMIL NADU</h4>
+          </div>
+          <p class="text-muted fs-8">A comprehensive portal celebrating the rich history, complex spiritual architecture, and divine narratives of Tamil Nadu, built to inform and guide devotees, tourists, and researchers alike.</p>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="text-warning font-secondary fw-bold mb-3">Quick Links</h5>
+          <ul class="list-unstyled footer-links fs-8">
+            <li><a href="index.html" class="text-muted text-decoration-none">Home</a></li>
+            <li><a href="gods.html" class="text-muted text-decoration-none">Gods</a></li>
+            <li><a href="temples.html" class="text-muted text-decoration-none">Temples</a></li>
+            <li><a href="festivals.html" class="text-muted text-decoration-none">Festivals</a></li>
+            <li><a href="about.html" class="text-muted text-decoration-none">About Project</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-6">
+          <h5 class="text-warning font-secondary fw-bold mb-3">Deity Categories</h5>
+          <ul class="list-unstyled footer-links fs-8">
+            <li><a href="#" onclick="filterGodCategory('Shiva')" class="text-muted text-decoration-none">Shaivism (Lord Shiva)</a></li>
+            <li><a href="#" onclick="filterGodCategory('Vishnu')" class="text-muted text-decoration-none">Vaishnavism (Lord Vishnu)</a></li>
+            <li><a href="#" onclick="filterGodCategory('Murugan')" class="text-muted text-decoration-none">Lord Murugan</a></li>
+            <li><a href="#" onclick="filterGodCategory('Vinayagar')" class="text-muted text-decoration-none">Lord Vinayagar</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h5 class="text-warning font-secondary fw-bold mb-3">Contact Info</h5>
+          <ul class="list-unstyled footer-contacts text-muted fs-8">
+            <li><i class="fa-solid fa-location-dot text-warning me-2"></i> HR & CE Department, Government of Tamil Nadu, Chennai, India.</li>
+            <li><i class="fa-solid fa-envelope text-warning me-2"></i> info@divinetamilnadu.org</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary mb-3">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center fs-9 text-muted text-center text-md-start">
+        <p class="mb-2 mb-md-0">&copy; 2026 Divine Tamil Nadu. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Search Modal -->
+  <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content bg-cream border-0 rounded-4">
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title fw-bold text-dark font-secondary" id="searchModalLabel"><i class="fa-solid fa-magnifying-glass me-2 text-warning"></i>Smart Portal Search</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="input-group mb-3 border rounded-pill overflow-hidden bg-white">
+            <span class="input-group-text bg-white border-0 px-3"><i class="fa-solid fa-magnifying-glass text-muted"></i></span>
+            <input type="text" class="form-control border-0 py-3 shadow-none text-dark" placeholder="Type key words..." id="modalSearchInput" autocomplete="off">
+            <button class="btn btn-warning px-4 text-dark fw-bold" onclick="handleModalSearch()">Search</button>
+          </div>
+          <div class="search-results-box rounded-3 bg-white p-3 border d-none" id="searchResultsBox">
+            <h6 class="border-bottom pb-2 fw-semibold text-muted mb-3 fs-8">Search Results:</h6>
+            <div id="modalSearchResults"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Login Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-cream border-0 rounded-4 shadow-lg overflow-hidden">
+        <div class="p-4">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h4 class="fw-bold font-secondary text-dark m-0" id="loginModalLabel">Welcome Back</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <form id="loginForm" onsubmit="event.preventDefault(); handleAuth('login');">
+            <div class="mb-3">
+              <label class="form-label text-muted fs-8">Email address</label>
+              <input type="email" class="form-control rounded-3" id="loginEmail" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label text-muted fs-8">Password</label>
+              <input type="password" class="form-control rounded-3" id="loginPassword" required>
+            </div>
+            <button type="submit" class="btn btn-warning w-100 py-2 fw-bold text-dark rounded-pill text-uppercase">Sign In</button>
+          </form>
+          <div class="text-center mt-3 fs-9 text-muted">
+            Or sign in as administrator: <a href="#" onclick="fillAdminCredentials()" class="text-danger fw-semibold">Click here</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom Script Dependencies -->
+  <script src="script.js"></script>
+  <script src="gods.js"></script>
+</body>
+</html>

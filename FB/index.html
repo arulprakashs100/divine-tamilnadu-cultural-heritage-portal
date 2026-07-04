@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Divine Tamil Nadu – Smart Hindu Gods, Temple & Cultural Heritage Portal</title>
+  <meta name="description" content="Discover the spiritual heritage, legendary history, and majestic temples of Tamil Nadu. Learn about Hindu Gods, upcoming festivals, and contribute to our community portal.">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar py-2 text-center text-white text-uppercase">
+    <span><i class="fa-solid fa-om me-2"></i> Welcome to the Divine Temple & Cultural Portal of Tamil Nadu <i class="fa-solid fa-om ms-2"></i></span>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="mainNavbar">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <i class="fa-solid fa-dharmachakra fa-spin-slow me-2 text-warning fs-3"></i>
+        <div class="d-inline-block">
+          <span class="brand-title d-block logo-text">DIVINE TAMIL NADU</span>
+          <span class="brand-sub pt-0 d-block fs-8 text-warning text-uppercase">Temples & Gods Portal</span>
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-uppercase">
+          <li class="nav-item"><a class="nav-link active" href="index.html" id="nav-home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="gods.html" id="nav-gods">Gods</a></li>
+          <li class="nav-item"><a class="nav-link" href="temples.html" id="nav-temples">Temples</a></li>
+          <li class="nav-item"><a class="nav-link" href="festivals.html" id="nav-festivals">Festivals</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html" id="nav-gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html" id="nav-about">About</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-3">
+          <!-- Search trigger -->
+          <button class="btn btn-outline-warning btn-sm border-0" data-bs-toggle="modal" data-bs-target="#searchModal" title="Smart Search">
+            <i class="fa-solid fa-magnifying-glass fs-5"></i>
+          </button>
+          
+          <!-- Theme Toggle -->
+          <button class="btn btn-outline-warning btn-sm border-0" id="themeToggle" title="Toggle Theme">
+            <i class="fa-solid fa-moon fs-5"></i>
+          </button>
+
+          <!-- Language Selector -->
+          <div class="dropdown">
+            <button class="btn btn-outline-warning btn-sm dropdown-toggle text-uppercase" type="button" id="languageMenu" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-globe me-1"></i> <span id="current-lang">EN</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="languageMenu" id="lang-dropdown">
+              <li><a class="dropdown-item active" href="#" data-lang="en">English</a></li>
+              <li><a class="dropdown-item" href="#" data-lang="ta">தமிழ் (Tamil)</a></li>
+              <li><a class="dropdown-item" href="#" data-lang="hi">हिन्दी (Hindi)</a></li>
+              <li><a class="dropdown-item" href="#" data-lang="te">తెలుగు (Telugu)</a></li>
+              <li><a class="dropdown-item" href="#" data-lang="kn">ಕನ್ನಡ (Kannada)</a></li>
+              <li><a class="dropdown-item" href="#" data-lang="ml">മലയാളം (Malayalam)</a></li>
+              <li><a class="dropdown-item" href="#" data-lang="fr">Français (French)</a></li>
+              <li><a class="dropdown-item" href="#" data-lang="de">Deutsch (German)</a></li>
+              <li><a class="dropdown-item" href="#" data-lang="ja">日本語 (Japanese)</a></li>
+              <li><a class="dropdown-item" href="#" data-lang="zh">中文 (Chinese)</a></li>
+            </ul>
+          </div>
+
+          <!-- Login / Profile Button -->
+          <button class="btn btn-warning btn-sm px-3 rounded-pill fw-semibold text-uppercase" id="loginBtn" data-bs-toggle="modal" data-bs-target="#loginModal">
+            <i class="fa-solid fa-user-circle me-1"></i> Login
+          </button>
+          
+          <!-- Admin shortcut link -->
+          <a href="admin.html" class="btn btn-outline-light btn-sm d-none d-xl-inline-block" id="adminShortcut" title="Admin Dashboard">
+            <i class="fa-solid fa-gauge"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section text-center text-white position-relative" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('assets/images/temple_hero.png');">
+    <div class="container d-flex flex-column justify-content-center align-items-center h-100 position-relative z-2">
+      <span class="badge bg-warning text-dark px-3 py-2 text-uppercase mb-3 tracking-widest fw-bold fade-in-up">The Land of Spiritual Light</span>
+      <h1 class="display-3 fw-bold hero-title text-shadow fade-in-up delay-1">Discover the Divine Heritage of Tamil Nadu</h1>
+      <p class="lead hero-sub text-warning-light fs-5 mx-auto max-width-700 fade-in-up delay-2">Explore the sacred abodes of Hindu Gods, magnificent temple architecture, rich mythological legends, and vibrant cultural festivals.</p>
+      
+      <!-- Integrated Instant Search Bar -->
+      <div class="search-container mt-4 p-2 bg-white-glass shadow rounded-pill fade-in-up delay-3 w-100 max-width-600">
+        <form class="d-flex" onsubmit="event.preventDefault(); handleHeroSearch();">
+          <input class="form-control border-0 bg-transparent px-4 py-3 shadow-none text-dark" type="search" placeholder="Search Gods, Temples, Districts (e.g. Shiva, Madurai, Murugan)..." id="heroSearchInput" autocomplete="off">
+          <button class="btn btn-warning btn-search px-4 rounded-pill" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i> <span class="d-none d-sm-inline ms-1">Search</span>
+          </button>
+        </form>
+        <!-- Suggestion list container -->
+        <ul id="heroSearchSuggestions" class="suggestions-list shadow border-0 rounded-4 d-none"></ul>
+      </div>
+
+      <div class="mt-5 fade-in-up delay-4">
+        <a href="#featured-gods" class="btn btn-outline-warning btn-lg px-4 py-2 me-3 rounded-pill">Explore Gods</a>
+        <a href="#featured-temples" class="btn btn-warning btn-lg px-4 py-2 text-dark rounded-pill">Explore Temples</a>
+      </div>
+
+      <!-- Animated Scroll indicator -->
+      <a href="#featured-categories" class="scroll-indicator mt-5 text-white text-decoration-none">
+        <span class="d-block text-uppercase tracking-wider fs-9">Scroll Down</span>
+        <i class="fa-solid fa-chevron-down bounce mt-2 text-warning fs-5"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- God Categories Carousel / Grid Section -->
+  <section class="py-5" id="featured-categories">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="pre-heading text-uppercase text-warning text-shadow-sm fw-semibold">Spiritual Pantheon</span>
+        <h2 class="section-title display-5 fw-bold font-secondary">Explore by Categories</h2>
+        <div class="title-divider mx-auto bg-warning"></div>
+      </div>
+
+      <div class="row row-cols-2 row-cols-md-5 g-4 text-center justify-content-center">
+        <div class="col">
+          <div class="category-card p-3 shadow-sm rounded-4 bg-white" onclick="filterGodCategory('Shiva')">
+            <div class="category-icon bg-danger-light text-danger mx-auto mb-3">
+              <i class="fa-solid fa-trident fs-3"></i>
+            </div>
+            <h5 class="category-name fw-bold">Shiva</h5>
+          </div>
+        </div>
+        <div class="col">
+          <div class="category-card p-3 shadow-sm rounded-4 bg-white" onclick="filterGodCategory('Vishnu')">
+            <div class="category-icon bg-warning-light text-warning mx-auto mb-3">
+              <i class="fa-solid fa-conch fs-3"></i>
+            </div>
+            <h5 class="category-name fw-bold">Vishnu</h5>
+          </div>
+        </div>
+        <div class="col">
+          <div class="category-card p-3 shadow-sm rounded-4 bg-white" onclick="filterGodCategory('Murugan')">
+            <div class="category-icon bg-orange-light text-orange mx-auto mb-3">
+              <i class="fa-solid fa-feather fs-3"></i>
+            </div>
+            <h5 class="category-name fw-bold">Murugan</h5>
+          </div>
+        </div>
+        <div class="col">
+          <div class="category-card p-3 shadow-sm rounded-4 bg-white" onclick="filterGodCategory('Vinayagar')">
+            <div class="category-icon bg-amber-light text-amber mx-auto mb-3">
+              <i class="fa-solid fa-om fs-3"></i>
+            </div>
+            <h5 class="category-name fw-bold">Vinayagar</h5>
+          </div>
+        </div>
+        <div class="col">
+          <div class="category-card p-3 shadow-sm rounded-4 bg-white" onclick="filterGodCategory('Parvati')">
+            <div class="category-icon bg-danger-light text-danger mx-auto mb-3">
+              <i class="fa-solid fa-spa fs-3"></i>
+            </div>
+            <h5 class="category-name fw-bold">Parvati</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Gods Section -->
+  <section class="py-5 bg-cream" id="featured-gods">
+    <div class="container">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-5">
+        <div class="text-center text-md-start">
+          <span class="pre-heading text-uppercase text-warning fw-semibold">Divine Deities</span>
+          <h2 class="section-title display-5 fw-bold font-secondary">Featured Gods</h2>
+          <div class="title-divider bg-warning"></div>
+        </div>
+        <a href="gods.html" class="btn btn-outline-danger px-4 py-2 rounded-pill mt-3 mt-md-0">View All Gods <i class="fa-solid fa-arrow-right ms-2"></i></a>
+      </div>
+
+      <div class="row g-4">
+        <!-- God Card 1 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="god-card card h-100 shadow border-0 rounded-4 overflow-hidden position-relative">
+            <div class="god-card-img-wrap position-relative">
+              <img src="assets/images/shiva.png" class="card-img-top god-img" alt="Lord Shiva">
+              <span class="badge bg-danger position-absolute top-3 start-3 text-uppercase">Supreme Deity</span>
+            </div>
+            <div class="card-body p-4">
+              <h3 class="card-title fw-bold text-dark font-secondary">Lord Shiva</h3>
+              <p class="card-text text-muted">The Destroyer of evil, cosmic dancer (Natarajar), and source of Yoga, meditation, and infinite peace.</p>
+              
+              <div class="god-attributes py-3 my-2 border-top border-bottom d-flex justify-content-between text-muted fs-8">
+                <span><i class="fa-solid fa-bolt text-warning me-1"></i> Trident (Trishula)</span>
+                <span><i class="fa-solid fa-horse text-warning me-1"></i> Nandi (Bull)</span>
+                <span><i class="fa-solid fa-ring text-warning me-1"></i> Parvati</span>
+              </div>
+              <a href="god-details.html?god=shiva" class="btn btn-warning w-100 py-2 fw-semibold text-dark rounded-pill">Read Mythology</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- God Card 2 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="god-card card h-100 shadow border-0 rounded-4 overflow-hidden position-relative">
+            <div class="god-card-img-wrap position-relative">
+              <img src="assets/images/murugan.png" class="card-img-top god-img" alt="Lord Murugan">
+              <span class="badge bg-warning text-dark position-absolute top-3 start-3 text-uppercase">Tamil God</span>
+            </div>
+            <div class="card-body p-4">
+              <h3 class="card-title fw-bold text-dark font-secondary">Lord Murugan</h3>
+              <p class="card-text text-muted">The divine general of demigods, Lord of hills, beauty, youth, and wisdom. Deeply integrated with Tamil culture.</p>
+              
+              <div class="god-attributes py-3 my-2 border-top border-bottom d-flex justify-content-between text-muted fs-8">
+                <span><i class="fa-solid fa-wand-magic-sparkles text-warning me-1"></i> Vel (Spear)</span>
+                <span><i class="fa-solid fa-dove text-warning me-1"></i> Peacock (Mayil)</span>
+                <span><i class="fa-solid fa-user-friends text-warning me-1"></i> Valli & Deivayanai</span>
+              </div>
+              <a href="god-details.html?god=murugan" class="btn btn-warning w-100 py-2 fw-semibold text-dark rounded-pill">Read Mythology</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- God Card 3 -->
+        <div class="col-lg-4 col-md-6 mx-auto">
+          <div class="god-card card h-100 shadow border-0 rounded-4 overflow-hidden position-relative">
+            <div class="god-card-img-wrap position-relative">
+              <img src="assets/images/ganesha.png" class="card-img-top god-img" alt="Lord Vinayagar">
+              <span class="badge bg-success position-absolute top-3 start-3 text-uppercase">Obstacle Remover</span>
+            </div>
+            <div class="card-body p-4">
+              <h3 class="card-title fw-bold text-dark font-secondary">Lord Vinayagar</h3>
+              <p class="card-text text-muted">Lord of wisdom, beginnings, and remover of obstacles. First worshipped in all sacred Hindu rituals.</p>
+              
+              <div class="god-attributes py-3 my-2 border-top border-bottom d-flex justify-content-between text-muted fs-8">
+                <span><i class="fa-solid fa-tooth text-warning me-1"></i> Broken Tusk</span>
+                <span><i class="fa-solid fa-paw text-warning me-1"></i> Mushika (Mouse)</span>
+                <span><i class="fa-solid fa-sun text-warning me-1"></i> Modak (Sweet)</span>
+              </div>
+              <a href="god-details.html?god=vinayagar" class="btn btn-warning w-100 py-2 fw-semibold text-dark rounded-pill">Read Mythology</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Famous Temples Section -->
+  <section class="py-5" id="featured-temples">
+    <div class="container">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-5">
+        <div class="text-center text-md-start">
+          <span class="pre-heading text-uppercase text-warning fw-semibold">Sacred Architecture</span>
+          <h2 class="section-title display-5 fw-bold font-secondary">Famous Temples</h2>
+          <div class="title-divider bg-warning"></div>
+        </div>
+        <a href="temples.html" class="btn btn-outline-danger px-4 py-2 rounded-pill mt-3 mt-md-0">View All Temples <i class="fa-solid fa-arrow-right ms-2"></i></a>
+      </div>
+
+      <div class="row g-4">
+        <!-- Temple 1 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="temple-card card h-100 shadow border-0 rounded-4 overflow-hidden">
+            <div class="position-relative overflow-hidden card-img-wrap">
+              <img src="assets/images/meenakshi.png" class="card-img-top temple-img" alt="Madurai Meenakshi Temple">
+              <div class="temple-rating position-absolute top-3 end-3 bg-white px-2 py-1 rounded shadow-sm fs-8 fw-bold text-dark">
+                <i class="fa-solid fa-star text-warning"></i> 4.9 (12.5k reviews)
+              </div>
+            </div>
+            <div class="card-body p-4">
+              <span class="text-uppercase text-danger fw-semibold fs-9 tracking-wider d-block mb-1">Madurai District</span>
+              <h3 class="card-title fw-bold text-dark font-secondary fs-4">Meenakshi Amman Temple</h3>
+              <p class="card-text text-muted text-truncate-2">A historic Hindu temple located on the southern bank of the Vaigai River, dedicated to Meenakshi (a form of Parvati) and Sundareswarar (Shiva).</p>
+              
+              <div class="temple-details-bar d-flex justify-content-between py-2 border-top border-bottom text-muted fs-8 mb-3">
+                <span><i class="fa-solid fa-vest me-1 text-warning"></i> Traditional Dress</span>
+                <span><i class="fa-solid fa-clock me-1 text-warning"></i> 5 AM - 10 PM</span>
+              </div>
+              <a href="temple-details.html?temple=meenakshi" class="btn btn-outline-danger w-100 py-2 fw-semibold rounded-pill">View Details & Map</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Temple 2 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="temple-card card h-100 shadow border-0 rounded-4 overflow-hidden">
+            <div class="position-relative overflow-hidden card-img-wrap">
+              <!-- Inline style gradient backup if image fails -->
+              <div class="fallback-img bg-dark text-white d-flex align-items-center justify-content-center text-center font-secondary p-4 fs-3" style="height:250px; background:linear-gradient(rgba(139,0,0,0.5), rgba(139,0,0,0.9)), url('assets/images/temple_hero.png') center/cover;">
+                Brihadisvara Temple
+              </div>
+              <div class="temple-rating position-absolute top-3 end-3 bg-white px-2 py-1 rounded shadow-sm fs-8 fw-bold text-dark">
+                <i class="fa-solid fa-star text-warning"></i> 5.0 (18k reviews)
+              </div>
+            </div>
+            <div class="card-body p-4">
+              <span class="text-uppercase text-danger fw-semibold fs-9 tracking-wider d-block mb-1">Thanjavur District</span>
+              <h3 class="card-title fw-bold text-dark font-secondary fs-4">Brihadisvara Temple</h3>
+              <p class="card-text text-muted text-truncate-2">Built by Raja Raja Chola I, this UNESCO World Heritage Site is an architectural wonder dedicated to Lord Shiva with a massive stone vimana tower.</p>
+              
+              <div class="temple-details-bar d-flex justify-content-between py-2 border-top border-bottom text-muted fs-8 mb-3">
+                <span><i class="fa-solid fa-vest me-1 text-warning"></i> Any Decent Clothes</span>
+                <span><i class="fa-solid fa-clock me-1 text-warning"></i> 6 AM - 8:30 PM</span>
+              </div>
+              <a href="temple-details.html?temple=brihadisvara" class="btn btn-outline-danger w-100 py-2 fw-semibold rounded-pill">View Details & Map</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Temple 3 -->
+        <div class="col-lg-4 col-md-6 mx-auto">
+          <div class="temple-card card h-100 shadow border-0 rounded-4 overflow-hidden">
+            <div class="position-relative overflow-hidden card-img-wrap">
+              <div class="fallback-img bg-dark text-white d-flex align-items-center justify-content-center text-center font-secondary p-4 fs-3" style="height:250px; background:linear-gradient(rgba(255,153,51,0.5), rgba(139,0,0,0.9)), url('assets/images/temple_hero.png') center/cover;">
+                Chidambaram Temple
+              </div>
+              <div class="temple-rating position-absolute top-3 end-3 bg-white px-2 py-1 rounded shadow-sm fs-8 fw-bold text-dark">
+                <i class="fa-solid fa-star text-warning"></i> 4.8 (9k reviews)
+              </div>
+            </div>
+            <div class="card-body p-4">
+              <span class="text-uppercase text-danger fw-semibold fs-9 tracking-wider d-block mb-1">Cuddalore District</span>
+              <h3 class="card-title fw-bold text-dark font-secondary fs-4">Natarajar Temple</h3>
+              <p class="card-text text-muted text-truncate-2">The temple representing Lord Shiva as the cosmic dancer Natarajar. Also represents Akasha (space), one of the Pancha Bhoota Sthalas.</p>
+              
+              <div class="temple-details-bar d-flex justify-content-between py-2 border-top border-bottom text-muted fs-8 mb-3">
+                <span><i class="fa-solid fa-vest me-1 text-warning"></i> Strict Traditional</span>
+                <span><i class="fa-solid fa-clock me-1 text-warning"></i> 6 AM - 10 PM</span>
+              </div>
+              <a href="temple-details.html?temple=chidambaram" class="btn btn-outline-danger w-100 py-2 fw-semibold rounded-pill">View Details & Map</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistics Counter Section -->
+  <section class="py-5 bg-gradient-custom text-white position-relative overflow-hidden">
+    <div class="gradient-accent-dots"></div>
+    <div class="container position-relative z-2">
+      <div class="row g-4 text-center justify-content-center">
+        <div class="col-6 col-md-3">
+          <div class="stat-item p-3">
+            <i class="fa-solid fa-om fs-1 text-warning mb-3"></i>
+            <h2 class="display-4 fw-bold counter-val" data-target="25">0</h2>
+            <p class="text-warning-light text-uppercase tracking-wider fs-8 mb-0">Hindu Deities</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-item p-3">
+            <i class="fa-solid fa-gopuram fs-1 text-warning mb-3"></i>
+            <h2 class="display-4 fw-bold counter-val" data-target="38000">0</h2>
+            <p class="text-warning-light text-uppercase tracking-wider fs-8 mb-0">Active Temples</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-item p-3">
+            <i class="fa-solid fa-calendar-check fs-1 text-warning mb-3"></i>
+            <h2 class="display-4 fw-bold counter-val" data-target="150">0</h2>
+            <p class="text-warning-light text-uppercase tracking-wider fs-8 mb-0">Festivals Documented</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-item p-3">
+            <i class="fa-solid fa-users fs-1 text-warning mb-3"></i>
+            <h2 class="display-4 fw-bold counter-val" data-target="1200">0</h2>
+            <p class="text-warning-light text-uppercase tracking-wider fs-8 mb-0">Community Contributors</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Festivals Section -->
+  <section class="py-5 bg-cream" id="festivals">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="pre-heading text-uppercase text-warning fw-semibold">Sacred Celebrations</span>
+        <h2 class="section-title display-5 fw-bold font-secondary">Vibrant Festivals</h2>
+        <div class="title-divider mx-auto bg-warning"></div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Festival 1 -->
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+            <div class="card-header border-0 bg-warning text-dark py-3 fw-bold text-center text-uppercase fs-8 tracking-widest">
+              Mid-January (Thai Month)
+            </div>
+            <div class="card-body p-4 text-center">
+              <div class="festival-icon-wrap bg-warning-light text-warning mx-auto mb-3">
+                <i class="fa-solid fa-seedling fs-2"></i>
+              </div>
+              <h4 class="card-title fw-bold text-dark font-secondary">Thai Pongal</h4>
+              <p class="text-muted fs-8">A multi-day harvest festival dedicated to the Sun God, Surya. Marked by cooking the Pongal dish in earthen pots.</p>
+              <a href="festivals.html" class="btn btn-link text-danger fw-semibold text-decoration-none">Read Significance <i class="fa-solid fa-chevron-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Festival 2 -->
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+            <div class="card-header border-0 bg-warning text-dark py-3 fw-bold text-center text-uppercase fs-8 tracking-widest">
+              January / February
+            </div>
+            <div class="card-body p-4 text-center">
+              <div class="festival-icon-wrap bg-orange-light text-orange mx-auto mb-3">
+                <i class="fa-solid fa-shield-halved fs-2"></i>
+              </div>
+              <h4 class="card-title fw-bold text-dark font-secondary">Thaipusam</h4>
+              <p class="text-muted fs-8">Dedicated to Lord Murugan, commemorating his victory over Soorapadman. Pilgrims carry Kavadi as a symbol of devotion.</p>
+              <a href="festivals.html" class="btn btn-link text-danger fw-semibold text-decoration-none">Read Significance <i class="fa-solid fa-chevron-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Festival 3 -->
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+            <div class="card-header border-0 bg-warning text-dark py-3 fw-bold text-center text-uppercase fs-8 tracking-widest">
+              November / December
+            </div>
+            <div class="card-body p-4 text-center">
+              <div class="festival-icon-wrap bg-danger-light text-danger mx-auto mb-3">
+                <i class="fa-solid fa-fire fs-2"></i>
+              </div>
+              <h4 class="card-title fw-bold text-dark font-secondary">Karthigai Deepam</h4>
+              <p class="text-muted fs-8">The festival of lights, celebrating Shiva as a giant pillar of light. Highlights include the fire atop Annamalai hill.</p>
+              <a href="festivals.html" class="btn btn-link text-danger fw-semibold text-decoration-none">Read Significance <i class="fa-solid fa-chevron-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community Contribution Banner Section -->
+  <section class="py-5 position-relative bg-dark text-white text-center" style="background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('assets/images/temple_hero.png'); background-attachment: fixed; background-size: cover;">
+    <div class="container py-4 position-relative z-2">
+      <i class="fa-solid fa-users-gear display-3 text-warning mb-4 animate-bounce"></i>
+      <h2 class="display-5 fw-bold font-secondary">Help Us Preserve our Cultural Heritage</h2>
+      <p class="lead max-width-700 mx-auto text-warning-light fs-6">Are we missing a temple, festival details, or a local deity in your area? Become a contributor and share correct spiritual details with devotees globally.</p>
+      
+      <!-- Button to toggle contribute form modal -->
+      <button class="btn btn-warning btn-lg px-5 py-3 rounded-pill mt-4 fw-semibold text-dark shadow text-uppercase" data-bs-toggle="modal" data-bs-target="#contributeModal">
+        <i class="fa-solid fa-pen-nib me-2"></i> Contribute Information
+      </button>
+    </div>
+  </section>
+
+  <!-- Testimonials & Pilgrim feedback -->
+  <section class="py-5" id="testimonials">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="pre-heading text-uppercase text-warning fw-semibold">Pilgrim Words</span>
+        <h2 class="section-title display-5 fw-bold font-secondary">Devotee Testimonials</h2>
+        <div class="title-divider mx-auto bg-warning"></div>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-5">
+          <div class="testimonial-card p-4 shadow-sm border-0 bg-white rounded-4 position-relative">
+            <i class="fa-solid fa-quote-left display-6 text-warning-light position-absolute top-2 start-3 opacity-2"></i>
+            <p class="text-muted font-italic fs-8 mb-4">"The Divine Tamil Nadu portal helped me plan my entire spiritual trip to Madurai and Thanjavur. The details on dress code and maps were completely accurate. Highly recommended for pilgrims!"</p>
+            <div class="d-flex align-items-center">
+              <div class="avatar bg-warning text-dark fw-bold rounded-circle d-flex align-items-center justify-content-center" style="width:45px; height:45px;">KS</div>
+              <div class="ms-3">
+                <h6 class="fw-bold mb-0">Karthik Subramanian</h6>
+                <small class="text-muted">Pilgrim from Chennai</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-5">
+          <div class="testimonial-card p-4 shadow-sm border-0 bg-white rounded-4 position-relative">
+            <i class="fa-solid fa-quote-left display-6 text-warning-light position-absolute top-2 start-3 opacity-2"></i>
+            <p class="text-muted font-italic fs-8 mb-4">"As a culture researcher, finding a portal that compiles detailed stories of Lord Shiva's avatars and temples with their historic timelines is an absolute treasure. Great initiative!"</p>
+            <div class="d-flex align-items-center">
+              <div class="avatar bg-danger text-white fw-bold rounded-circle d-flex align-items-center justify-content-center" style="width:45px; height:45px;">AM</div>
+              <div class="ms-3">
+                <h6 class="fw-bold mb-0">Dr. Alice Moreau</h6>
+                <small class="text-muted">Cultural Anthropologist, Paris</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="py-5 bg-gradient-custom text-white text-center">
+    <div class="container py-3">
+      <div class="max-width-600 mx-auto">
+        <i class="fa-regular fa-envelope-open display-4 text-warning mb-3"></i>
+        <h3 class="fw-bold font-secondary display-6">Subscribe to Our Spiritual Newsletter</h3>
+        <p class="text-warning-light fs-8 mb-4">Receive monthly updates on festival schedules, divine history articles, and temple events in Tamil Nadu.</p>
+        <form class="d-flex gap-2 max-width-500 mx-auto" onsubmit="event.preventDefault(); alert('Thank you for subscribing to our newsletter!');">
+          <input type="email" class="form-control rounded-pill px-4 border-0" placeholder="Enter your email address" required>
+          <button type="submit" class="btn btn-warning rounded-pill px-4 text-dark fw-bold">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white pt-5 pb-3">
+    <div class="container">
+      <div class="row g-4 mb-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="d-flex align-items-center mb-3">
+            <i class="fa-solid fa-dharmachakra text-warning fs-3 me-2"></i>
+            <h4 class="font-secondary fw-bold text-warning mb-0 logo-text">DIVINE TAMIL NADU</h4>
+          </div>
+          <p class="text-muted fs-8">A comprehensive portal celebrating the rich history, complex spiritual architecture, and divine narratives of Tamil Nadu, built to inform and guide devotees, tourists, and researchers alike.</p>
+          <div class="d-flex gap-3 fs-5 mt-3">
+            <a href="#" class="text-warning-light"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="text-warning-light"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="text-warning-light"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="text-warning-light"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="text-warning font-secondary fw-bold mb-3">Quick Links</h5>
+          <ul class="list-unstyled footer-links fs-8">
+            <li><a href="index.html" class="text-muted text-decoration-none">Home</a></li>
+            <li><a href="gods.html" class="text-muted text-decoration-none">Gods</a></li>
+            <li><a href="temples.html" class="text-muted text-decoration-none">Temples</a></li>
+            <li><a href="festivals.html" class="text-muted text-decoration-none">Festivals</a></li>
+            <li><a href="about.html" class="text-muted text-decoration-none">About Project</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-6">
+          <h5 class="text-warning font-secondary fw-bold mb-3">Deity Categories</h5>
+          <ul class="list-unstyled footer-links fs-8">
+            <li><a href="gods.html?category=Shiva" class="text-muted text-decoration-none">Shaivism (Lord Shiva)</a></li>
+            <li><a href="gods.html?category=Vishnu" class="text-muted text-decoration-none">Vaishnavism (Lord Vishnu)</a></li>
+            <li><a href="gods.html?category=Murugan" class="text-muted text-decoration-none">Lord Murugan</a></li>
+            <li><a href="gods.html?category=Vinayagar" class="text-muted text-decoration-none">Lord Vinayagar</a></li>
+            <li><a href="gods.html?category=Parvati" class="text-muted text-decoration-none">Shakti Deities</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h5 class="text-warning font-secondary fw-bold mb-3">Contact Info</h5>
+          <ul class="list-unstyled footer-contacts text-muted fs-8">
+            <li><i class="fa-solid fa-location-dot text-warning me-2"></i> HR & CE Department, Government of Tamil Nadu, Chennai, India.</li>
+            <li><i class="fa-solid fa-envelope text-warning me-2"></i> info@divinetamilnadu.org</li>
+            <li><i class="fa-solid fa-phone text-warning me-2"></i> +91 44 2859 1234</li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="border-secondary mb-3">
+
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center fs-9 text-muted text-center text-md-start">
+        <p class="mb-2 mb-md-0">&copy; 2026 Divine Tamil Nadu. All rights reserved. Designed for spiritual preservation.</p>
+        <div>
+          <a href="#" class="text-muted text-decoration-none me-3">Privacy Policy</a>
+          <a href="#" class="text-muted text-decoration-none">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODALS -->
+
+  <!-- Smart Search Modal -->
+  <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content bg-cream border-0 rounded-4">
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title fw-bold text-dark font-secondary" id="searchModalLabel"><i class="fa-solid fa-magnifying-glass me-2 text-warning"></i>Smart Portal Search</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="input-group mb-3 border rounded-pill overflow-hidden bg-white">
+            <span class="input-group-text bg-white border-0 px-3"><i class="fa-solid fa-magnifying-glass text-muted"></i></span>
+            <input type="text" class="form-control border-0 py-3 shadow-none text-dark" placeholder="Type key words (e.g. Shiva, Meenakshi, Madurai)..." id="modalSearchInput" autocomplete="off">
+            <button class="btn btn-warning px-4 text-dark fw-bold" onclick="handleModalSearch()">Search</button>
+          </div>
+          
+          <div class="quick-tags mb-3 fs-9">
+            <span class="text-muted me-2">Trending Searches:</span>
+            <span class="badge bg-light text-dark pointer-badge me-1" onclick="quickSearch('Shiva')">Shiva</span>
+            <span class="badge bg-light text-dark pointer-badge me-1" onclick="quickSearch('Murugan')">Murugan</span>
+            <span class="badge bg-light text-dark pointer-badge me-1" onclick="quickSearch('Madurai')">Madurai</span>
+            <span class="badge bg-light text-dark pointer-badge me-1" onclick="quickSearch('Vinayagar')">Vinayagar</span>
+            <span class="badge bg-light text-dark pointer-badge me-1" onclick="quickSearch('Meenakshi')">Meenakshi</span>
+            <span class="badge bg-light text-dark pointer-badge" onclick="quickSearch('Chidambaram')">Chidambaram</span>
+          </div>
+
+          <div class="search-results-box rounded-3 bg-white p-3 border d-none" id="searchResultsBox">
+            <h6 class="border-bottom pb-2 fw-semibold text-muted mb-3 fs-8">Search Results:</h6>
+            <div id="modalSearchResults">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Login Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-cream border-0 rounded-4 shadow-lg overflow-hidden">
+        <div class="row g-0">
+          <div class="col-12 p-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h4 class="fw-bold font-secondary text-dark m-0" id="loginModalLabel">Welcome Back</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            <ul class="nav nav-pills nav-fill mb-4 bg-light p-1 rounded-pill" id="pills-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active rounded-pill text-uppercase fs-9 py-2" id="pills-login-tab" data-bs-toggle="pill" data-bs-target="#pills-login" type="button" role="tab" aria-controls="pills-login" aria-selected="true">Login</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link rounded-pill text-uppercase fs-9 py-2" id="pills-register-tab" data-bs-toggle="pill" data-bs-target="#pills-register" type="button" role="tab" aria-controls="pills-register" aria-selected="false">Register</button>
+              </li>
+            </ul>
+
+            <div class="tab-content" id="pills-tabContent">
+              <!-- Login Tab -->
+              <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="pills-login-tab">
+                <form id="loginForm" onsubmit="event.preventDefault(); handleAuth('login');">
+                  <div class="mb-3">
+                    <label class="form-label text-muted fs-8">Email address</label>
+                    <input type="email" class="form-control rounded-3" id="loginEmail" required>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label text-muted fs-8">Password</label>
+                    <input type="password" class="form-control rounded-3" id="loginPassword" required>
+                  </div>
+                  <div class="mb-3 d-flex justify-content-between fs-8">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="rememberMe">
+                      <label class="form-check-label text-muted" for="rememberMe">Remember me</label>
+                    </div>
+                    <a href="#" class="text-danger text-decoration-none">Forgot password?</a>
+                  </div>
+                  <button type="submit" class="btn btn-warning w-100 py-2 fw-bold text-dark rounded-pill text-uppercase">Sign In</button>
+                </form>
+                <div class="text-center mt-3 fs-9 text-muted">
+                  Or sign in as administrator: <a href="#" onclick="fillAdminCredentials()" class="text-danger fw-semibold">Click here</a>
+                </div>
+              </div>
+              
+              <!-- Register Tab -->
+              <div class="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="pills-register-tab">
+                <form id="registerForm" onsubmit="event.preventDefault(); handleAuth('register');">
+                  <div class="mb-3">
+                    <label class="form-label text-muted fs-8">Full Name</label>
+                    <input type="text" class="form-control rounded-3" id="regName" required>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label text-muted fs-8">Email address</label>
+                    <input type="email" class="form-control rounded-3" id="regEmail" required>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label text-muted fs-8">Password</label>
+                    <input type="password" class="form-control rounded-3" id="regPassword" required>
+                  </div>
+                  <div class="form-check mb-3 fs-8">
+                    <input type="checkbox" class="form-check-input" id="termsCheck" required>
+                    <label class="form-check-label text-muted" for="termsCheck">I agree to the Terms of Service & Privacy Policy</label>
+                  </div>
+                  <button type="submit" class="btn btn-warning w-100 py-2 fw-bold text-dark rounded-pill text-uppercase">Create Account</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contribute Information Modal -->
+  <div class="modal fade" id="contributeModal" tabindex="-1" aria-labelledby="contributeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content bg-cream border-0 rounded-4">
+        <div class="modal-header border-0 pb-0">
+          <h4 class="modal-title fw-bold text-dark font-secondary" id="contributeModalLabel"><i class="fa-solid fa-pen-nib text-warning me-2"></i>Contribute Divine Information</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <!-- Auth state check -->
+          <div class="alert alert-warning text-dark fs-8 border-0 shadow-sm rounded-3 mb-4" id="contributeAuthAlert">
+            <i class="fa-solid fa-circle-info me-2 text-danger"></i> Note: You are contributing as a <strong>Guest</strong>. You can login or register to track your contributions in your profile.
+          </div>
+          
+          <form id="contributionForm" onsubmit="event.preventDefault(); submitContribution();">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label fw-semibold text-muted fs-8">Category Type *</label>
+                <select class="form-select" id="contributeCategory" required onchange="toggleContributeFields()">
+                  <option value="God">God/Deity Profile</option>
+                  <option value="Temple">Temple Profile</option>
+                  <option value="Festival">Festival Profile</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-semibold text-muted fs-8" id="lblContributeName">God/Temple Name *</label>
+                <input type="text" class="form-control" id="contributeName" placeholder="e.g. Lord Murugan, Brihadisvara Temple" required>
+              </div>
+
+              <!-- God Fields -->
+              <div class="col-12 g-field">
+                <label class="form-label fw-semibold text-muted fs-8">Consort & Family Info</label>
+                <input type="text" class="form-control" id="contributeGodConsort" placeholder="e.g. Parvati, Ganesha, Deivayanai">
+              </div>
+              
+              <!-- Temple Fields -->
+              <div class="col-md-6 t-field d-none">
+                <label class="form-label fw-semibold text-muted fs-8">Temple Location (District) *</label>
+                <input type="text" class="form-control" id="contributeLocation" placeholder="e.g. Madurai, Tanjore">
+              </div>
+              <div class="col-md-6 t-field d-none">
+                <label class="form-label fw-semibold text-muted fs-8">Presiding Deity *</label>
+                <input type="text" class="form-control" id="contributeTempleDeity" placeholder="e.g. Sundareswarar">
+              </div>
+
+              <div class="col-12">
+                <label class="form-label fw-semibold text-muted fs-8">Brief Introduction / Summary *</label>
+                <textarea class="form-control" id="contributeSummary" rows="2" placeholder="Write a short summary..." required></textarea>
+              </div>
+              <div class="col-12">
+                <label class="form-label fw-semibold text-muted fs-8">Mythology & Historical Legends *</label>
+                <textarea class="form-control" id="contributeLegends" rows="4" placeholder="Share detailed stories, myths, or histories..." required></textarea>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-semibold text-muted fs-8">Image Upload (Link or File)</label>
+                <input type="text" class="form-control" id="contributeImage" placeholder="Paste image URL (optional)">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-semibold text-muted fs-8">Reference / Authentic Source *</label>
+                <input type="text" class="form-control" id="contributeSource" placeholder="e.g. Shiva Purana, Kanda Puranam, Local Temple Board" required>
+              </div>
+
+              <hr class="border-light">
+              <h6 class="fw-bold font-secondary text-dark m-0 fs-7">Contributor Information</h6>
+              
+              <div class="col-md-6">
+                <label class="form-label fw-semibold text-muted fs-8">Your Name *</label>
+                <input type="text" class="form-control" id="contribName" placeholder="Enter your name" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-semibold text-muted fs-8">Your Email *</label>
+                <input type="email" class="form-control" id="contribEmail" placeholder="Enter your email" required>
+              </div>
+
+              <div class="col-12 text-end">
+                <button type="button" class="btn btn-outline-secondary px-4 rounded-pill me-2" data-bs-dismiss="modal">Cancel</button>
+                <button type="submit" class="btn btn-warning px-4 text-dark fw-bold rounded-pill shadow">Submit for Verification</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>

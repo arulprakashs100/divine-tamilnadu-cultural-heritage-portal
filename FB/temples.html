@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sacred Temples of Tamil Nadu – Pilgrimage Portal</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="temples.css">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar py-2 text-center text-white text-uppercase">
+    <span><i class="fa-solid fa-gopuram me-2"></i> Plan your Spiritual Yatra – Sacred Temples & Architecture <i class="fa-solid fa-gopuram ms-2"></i></span>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="mainNavbar">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <i class="fa-solid fa-dharmachakra fa-spin-slow me-2 text-warning fs-3"></i>
+        <div class="d-inline-block">
+          <span class="brand-title d-block logo-text">DIVINE TAMIL NADU</span>
+          <span class="brand-sub pt-0 d-block fs-8 text-warning text-uppercase">Temples & Gods Portal</span>
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-uppercase">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="gods.html">Gods</a></li>
+          <li class="nav-item"><a class="nav-link active" href="temples.html">Temples</a></li>
+          <li class="nav-item"><a class="nav-link" href="festivals.html">Festivals</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-3">
+          <button class="btn btn-outline-warning btn-sm border-0" data-bs-toggle="modal" data-bs-target="#searchModal" title="Smart Search">
+            <i class="fa-solid fa-magnifying-glass fs-5"></i>
+          </button>
+          
+          <button class="btn btn-outline-warning btn-sm border-0" id="themeToggle" title="Toggle Theme">
+            <i class="fa-solid fa-moon fs-5"></i>
+          </button>
+
+          <div class="dropdown">
+            <button class="btn btn-outline-warning btn-sm dropdown-toggle text-uppercase" type="button" id="languageMenu" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-globe me-1"></i> <span id="current-lang">EN</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="languageMenu" id="lang-dropdown">
+              <li><a class="dropdown-item active" href="#" data-lang="en">English</a></li>
+              <li><a class="dropdown-item" href="#" data-lang="ta">தமிழ் (Tamil)</a></li>
+              <li><a class="dropdown-item" href="#" data-lang="hi">हिन्दी (Hindi)</a></li>
+            </ul>
+          </div>
+
+          <button class="btn btn-warning btn-sm px-3 rounded-pill fw-semibold text-uppercase" id="loginBtn" data-bs-toggle="modal" data-bs-target="#loginModal">
+            <i class="fa-solid fa-user-circle me-1"></i> Login
+          </button>
+          
+          <a href="admin.html" class="btn btn-outline-light btn-sm d-none d-xl-inline-block" id="adminShortcut" title="Admin Dashboard">
+            <i class="fa-solid fa-gauge"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header py-5 text-center text-white position-relative" style="background-image: linear-gradient(rgba(139,0,0,0.6), rgba(44,44,44,0.85)), url('assets/images/temple_hero.png'); background-position: center; background-size: cover;">
+    <div class="container py-4 position-relative z-2">
+      <h1 class="display-4 fw-bold font-secondary text-shadow">Sacred Temples & Architecture</h1>
+      <p class="lead max-width-700 mx-auto text-warning-light fs-6">Explore the history, architectural marvels, special poojas, and guidelines for visiting Tamil Nadu's spiritual monuments.</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Sidebar Filters -->
+        <div class="col-lg-3">
+          <div class="filter-sidebar p-4 bg-white shadow-sm rounded-4 border">
+            <h5 class="fw-bold font-secondary text-dark border-bottom pb-2 mb-3">
+              <i class="fa-solid fa-sliders text-warning me-2"></i>Filter Temples
+            </h5>
+
+            <!-- Search by Temple Name / City -->
+            <div class="mb-4">
+              <label class="form-label text-muted fs-8 fw-semibold">Search Name or City</label>
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search temple..." id="templeSearchBox">
+                <span class="input-group-text bg-warning text-dark border-0"><i class="fa-solid fa-search"></i></span>
+              </div>
+            </div>
+
+            <!-- Districts Filter -->
+            <div class="mb-4">
+              <label class="form-label text-muted fs-8 fw-semibold">District</label>
+              <div class="d-flex flex-column gap-2" id="templeDistrictFilterGroup">
+                <button class="btn btn-filter active text-start px-3 py-2 rounded-3" data-district="All">
+                  <i class="fa-solid fa-map-location-dot me-2"></i> All Districts
+                </button>
+                <button class="btn btn-filter text-start px-3 py-2 rounded-3" data-district="Madurai">
+                  <i class="fa-solid fa-location-arrow me-2 text-danger"></i> Madurai
+                </button>
+                <button class="btn btn-filter text-start px-3 py-2 rounded-3" data-district="Thanjavur">
+                  <i class="fa-solid fa-location-arrow me-2 text-warning"></i> Thanjavur
+                </button>
+                <button class="btn btn-filter text-start px-3 py-2 rounded-3" data-district="Cuddalore">
+                  <i class="fa-solid fa-location-arrow me-2 text-info"></i> Cuddalore
+                </button>
+                <button class="btn btn-filter text-start px-3 py-2 rounded-3" data-district="Sivaganga">
+                  <i class="fa-solid fa-location-arrow me-2 text-success"></i> Sivaganga
+                </button>
+                <button class="btn btn-filter text-start px-3 py-2 rounded-3" data-district="Trichy">
+                  <i class="fa-solid fa-location-arrow me-2 text-primary"></i> Trichy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Temples Cards Grid -->
+        <div class="col-lg-9">
+          <!-- Status Sorting Bar -->
+          <div class="d-flex justify-content-between align-items-center mb-4 p-3 bg-white border rounded-3 shadow-sm">
+            <span class="text-muted fs-8" id="templeCountText">Showing 0 temples</span>
+            <div class="d-flex align-items-center gap-2">
+              <label class="text-nowrap fs-8 text-muted mb-0">Sort By:</label>
+              <select class="form-select form-select-sm" id="templeSortOption">
+                <option value="name-asc">Temple Name (A-Z)</option>
+                <option value="name-desc">Temple Name (Z-A)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Temples Grid -->
+          <div class="row g-4" id="templesListingGrid">
+            <!-- Dynamically populated via temples.js -->
+          </div>
+
+          <!-- Pagination -->
+          <nav class="mt-5" aria-label="Temples navigation">
+            <ul class="pagination justify-content-center" id="templesPagination">
+              <!-- Dynamically populated via temples.js -->
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white pt-5 pb-3">
+    <div class="container text-center text-md-start">
+      <div class="row g-4 mb-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="d-flex align-items-center justify-content-center justify-content-md-start mb-3">
+            <i class="fa-solid fa-dharmachakra text-warning fs-3 me-2"></i>
+            <h4 class="font-secondary fw-bold text-warning mb-0 logo-text">DIVINE TAMIL NADU</h4>
+          </div>
+          <p class="text-muted fs-8">Preserving and presenting the glorious Hindu temple architecture and mythologies of Tamil Nadu, India.</p>
+        </div>
+        <div class="col-md-6 col-lg-4 text-center">
+          <h5 class="text-warning font-secondary fw-bold mb-3">Quick Links</h5>
+          <a href="index.html" class="text-muted text-decoration-none d-block fs-8 mb-2">Home</a>
+          <a href="gods.html" class="text-muted text-decoration-none d-block fs-8 mb-2">Gods</a>
+          <a href="temples.html" class="text-muted text-decoration-none d-block fs-8">Temples</a>
+        </div>
+      </div>
+      <hr class="border-secondary mb-3">
+      <p class="mb-0 fs-9 text-muted text-center">&copy; 2026 Divine Tamil Nadu. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Search Modal -->
+  <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content bg-cream border-0 rounded-4">
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title fw-bold text-dark font-secondary" id="searchModalLabel"><i class="fa-solid fa-magnifying-glass me-2 text-warning"></i>Smart Portal Search</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="input-group mb-3 border rounded-pill overflow-hidden bg-white">
+            <span class="input-group-text bg-white border-0 px-3"><i class="fa-solid fa-magnifying-glass text-muted"></i></span>
+            <input type="text" class="form-control border-0 py-3 shadow-none text-dark" placeholder="Type key words..." id="modalSearchInput" autocomplete="off">
+            <button class="btn btn-warning px-4 text-dark fw-bold" onclick="handleModalSearch()">Search</button>
+          </div>
+          <div class="search-results-box rounded-3 bg-white p-3 border d-none" id="searchResultsBox">
+            <h6 class="border-bottom pb-2 fw-semibold text-muted mb-3 fs-8">Search Results:</h6>
+            <div id="modalSearchResults"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Login Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-cream border-0 rounded-4 shadow-lg overflow-hidden">
+        <div class="p-4">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h4 class="fw-bold font-secondary text-dark m-0" id="loginModalLabel">Welcome Back</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <form id="loginForm" onsubmit="event.preventDefault(); handleAuth('login');">
+            <div class="mb-3">
+              <label class="form-label text-muted fs-8">Email address</label>
+              <input type="email" class="form-control rounded-3" id="loginEmail" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label text-muted fs-8">Password</label>
+              <input type="password" class="form-control rounded-3" id="loginPassword" required>
+            </div>
+            <button type="submit" class="btn btn-warning w-100 py-2 fw-bold text-dark rounded-pill text-uppercase">Sign In</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom Script Dependencies -->
+  <script src="script.js"></script>
+  <script src="temples.js"></script>
+</body>
+</html>
