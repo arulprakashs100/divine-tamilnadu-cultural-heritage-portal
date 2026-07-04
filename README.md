@@ -1,97 +1,87 @@
-Here is a professional **README.md** you can directly paste into your GitHub repository.
-
-````markdown
 # 🛕 Divine Tamil Nadu – Smart Hindu Gods, Temple & Cultural Heritage Portal
 
-> **Discover the Divine Heritage of Tamil Nadu – Gods, Temples, Mythology, and Culture in One Place.**
-
-## 📖 Project Overview
-
-**Divine Tamil Nadu** is a Java Full Stack web application designed to provide comprehensive information about Hindu gods, mythology, famous temples, festivals, and Tamil Nadu's rich spiritual and cultural heritage.
-
-The platform serves as a centralized knowledge portal for devotees, students, researchers, pilgrims, and international tourists. Users can explore detailed information about deities, temple history, mythology, festivals, and temple locations through an intuitive and responsive interface.
-
-Additionally, the portal allows users to contribute new information, which is reviewed and approved by the administrator before publication.
+> **A Java Full Stack web application that provides comprehensive information about Hindu gods, mythology, famous temples, festivals, and Tamil Nadu's rich spiritual and cultural heritage.**
 
 ---
 
-# ✨ Features
+## 📌 Project Overview
 
-## 👤 User Features
+**Divine Tamil Nadu** is a Java Full Stack web application developed to preserve and share the rich spiritual and cultural heritage of Tamil Nadu. The application allows users to explore detailed information about Hindu gods, their mythology, famous temples, festivals, and historical significance through a modern, responsive, and user-friendly interface.
 
-- 🏠 Responsive Home Page
-- 🔍 Smart Search for Gods and Temples
-- 🛕 Browse Gods by Category
-- 📖 View Detailed God Information
-- 🏛 Explore Temple Information
-- 🗺 Temple Location & Google Maps Integration
-- 🎉 Festival Information
-- 🖼 Image Gallery
-- 🌐 Multi-Language Support
-- ❤️ Save Favorite Gods & Temples
-- 📝 Submit New God/Temple Information
-- 💬 Feedback & Suggestions
+The portal is designed for devotees, students, researchers, pilgrims, and international tourists who wish to learn about Hindu culture and temple heritage. It also includes a community contribution feature, allowing users to submit information about gods or temples that is reviewed and approved by an administrator before publication.
 
 ---
 
-## 🔐 Admin Features
+## ✨ Key Features
+
+### 👤 User Module
+
+- Responsive and modern Home Page
+- Search gods and temples
+- Browse gods by category
+- View detailed mythology and history
+- Explore famous temples
+- Temple location information
+- Festival information
+- Image gallery
+- Multi-language support
+- Community contribution form
+- Contact and feedback form
+
+### 🔐 Admin Module
 
 - Secure Admin Login
-- Dashboard Overview
+- Dashboard with statistics
 - Manage Gods
 - Manage Temples
 - Manage Categories
 - Manage Festivals
-- Approve User Contributions
+- Manage User Contributions
 - Upload Images
-- Manage User Feedback
 - Manage Website Content
 
 ---
 
-# 🛕 God Information Includes
+## 🛕 God Information
 
-Each God contains:
+Each deity page includes:
 
-- Name
-- Images
+- God Name
+- Image
 - Introduction
 - Mythology
 - Historical Significance
 - Different Forms / Avatars
+- Symbolism
 - Weapons
 - Vahana (Vehicle)
-- Consort
-- Children
 - Festivals
-- Mantras
 - Famous Temples
 - Image Gallery
 
 ---
 
-# 🏛 Temple Information Includes
+## 🏛 Temple Information
 
-Each Temple contains:
+Each temple page contains:
 
 - Temple Name
 - Main Deity
 - District
 - State
-- Address
 - Temple History
 - Architecture
 - Temple Timings
 - Festivals
-- Google Maps Location
 - Temple Images
+- Google Maps Location
 - Nearby Attractions
 
 ---
 
-# 🌍 Multi-Language Support
+## 🌐 Multi-Language Support
 
-Users can switch the website language using the language selector.
+The application supports multiple languages to make the portal accessible to users from different regions.
 
 Supported Languages:
 
@@ -108,25 +98,26 @@ Supported Languages:
 
 ---
 
-# 📤 Community Contribution
+## 📤 Community Contribution
 
-If users cannot find information about a particular deity or temple, they can submit:
+Users can contribute information if a particular god or temple is unavailable.
+
+Users can submit:
 
 - God Name
 - Temple Name
-- Image Upload
-- History
+- Image
 - Description
 - Temple Location
 - Reference Source
 
-The administrator reviews and verifies all submissions before publishing them.
+The administrator reviews every submission before publishing it on the website.
 
 ---
 
-# 🛠 Tech Stack
+## 🛠 Tech Stack
 
-## Frontend
+### Frontend
 
 - HTML5
 - CSS3
@@ -135,7 +126,7 @@ The administrator reviews and verifies all submissions before publishing them.
 - Font Awesome
 - Google Fonts
 
-## Backend
+### Backend
 
 - Java 21
 - Spring Boot
@@ -143,28 +134,28 @@ The administrator reviews and verifies all submissions before publishing them.
 - Spring Data JPA
 - Spring Security
 
-## Database
+### Database
 
 - PostgreSQL
 
-## Build Tool
+### Build Tool
 
 - Maven
 
-## Version Control
+### Version Control
 
 - Git
 - GitHub
 
-## IDE
+### IDE
 
-- IntelliJ IDEA / Eclipse
+- IntelliJ IDEA
 
 ---
 
-# 📂 Project Structure
+## 📂 Project Structure
 
-```
+```text
 divine-tamilnadu-cultural-heritage-portal
 │
 ├── src
@@ -185,7 +176,6 @@ divine-tamilnadu-cultural-heritage-portal
 │   │   │   │   ├── js
 │   │   │   │   ├── images
 │   │   │   │   └── uploads
-│   │   │   │
 │   │   │   ├── templates
 │   │   │   └── application.properties
 │   │
@@ -197,70 +187,74 @@ divine-tamilnadu-cultural-heritage-portal
 
 ---
 
-# 🗄 Database Tables
+## 🗄 Database Tables
 
 - Users
 - Admin
 - Gods
-- God Categories
+- Categories
 - Temples
 - Festivals
 - Gallery
 - User Contributions
-- Favorites
 - Feedback
 
 ---
 
-# 🚀 Project Workflow
+## 🚀 Application Workflow
 
-```
+```text
 User
 
-↓
+   │
+   ▼
 
 Visit Website
 
-↓
+   │
+   ▼
 
 Search God / Temple
 
-↓
+   │
+   ▼
 
-View Details
+View Detailed Information
 
-↓
+   │
+   ▼
 
-Explore History & Mythology
+Explore Mythology & Temple History
 
-↓
+   │
+   ▼
 
-View Temple Information
+View Festival Information
 
-↓
-
-Change Language (Optional)
-
-↓
+   │
+   ▼
 
 Submit New Information (Optional)
 
-↓
+   │
+   ▼
 
-Admin Review
+Admin Reviews Submission
 
-↓
+   │
+   ▼
 
 Approve & Publish
 
-↓
+   │
+   ▼
 
 Updated Information Available to All Users
 ```
 
 ---
 
-# 🔐 Security
+## 🔒 Security Features
 
 - Spring Security Authentication
 - Role-Based Authorization
@@ -270,51 +264,50 @@ Updated Information Available to All Users
 
 ---
 
-# 🎯 Project Objectives
+## 🎯 Project Objectives
 
 - Preserve Tamil Nadu's spiritual heritage
-- Provide authentic information about Hindu gods and temples
-- Help tourists explore famous temples
+- Share authentic information about Hindu gods and temples
 - Promote cultural awareness
-- Build a community-driven knowledge platform
-- Support multiple languages
+- Help pilgrims and tourists explore temples
+- Support multilingual access
+- Build a community-driven information portal
 - Deliver a responsive and user-friendly experience
 
 ---
 
-# 💡 Future Enhancements
+## 🚀 Future Enhancements
 
-- 🤖 AI Chatbot for God & Temple Queries
-- 🎙 Voice Search
-- 📱 Mobile Application
-- 🛰 GPS-Based Nearby Temple Finder
-- 📷 QR Code Temple Information
-- 🎥 Virtual Temple Tours
-- 📅 Festival Reminder System
-- 🔔 Notification Service
-- ❤️ Personalized Recommendations
+- AI Chatbot for God & Temple Queries
+- Voice Search
+- Nearby Temple Finder
+- QR Code Temple Information
+- Virtual Temple Tour
+- Mobile Application
+- Festival Reminder Notifications
+- Personalized Recommendations
 
 ---
 
-# 📸 Screenshots
+## 📸 Screenshots
 
-> Add screenshots of the following pages:
+Add screenshots of the following pages:
 
 - Home Page
 - Gods Page
 - God Details Page
-- Temple Listing
-- Temple Details
+- Temple Listing Page
+- Temple Details Page
 - Admin Dashboard
 - Login Page
 
 ---
 
-# 📈 Learning Outcomes
+## 📚 Learning Outcomes
 
-This project helped strengthen knowledge in:
+This project enhanced my knowledge in:
 
-- Java Programming
+- Core Java
 - Object-Oriented Programming (OOP)
 - Spring Boot
 - Spring MVC
@@ -333,29 +326,25 @@ This project helped strengthen knowledge in:
 
 ---
 
-# 👨‍💻 Author
+## 👨‍💻 Author
 
 **Arul Prakash S**
 
-Aspiring Java Full Stack Developer
+**Aspiring Java Full Stack Developer**
 
-- 💼 Passionate about Java, Spring Boot, and Full Stack Development
-- 🌱 Continuously learning modern web technologies
-- 🚀 Building real-world Java Full Stack projects
+### Connect with Me
 
----
-
-# ⭐ Support
-
-If you found this project helpful, consider giving it a **⭐ Star** on GitHub.
-
-Your support is greatly appreciated!
+- GitHub: https://github.com/arulprakashs100
+- LinkedIn: *(Add your LinkedIn profile URL here)*
 
 ---
 
-## 📜 License
+## ⭐ If you like this project
 
-This project is developed for educational and portfolio purposes.
-````
+If you found this project useful, please consider giving it a **⭐ Star** on GitHub.
 
-This README is suitable for a professional GitHub portfolio and correctly reflects your stack, including **PostgreSQL** instead of MySQL. It is structured the way recruiters typically expect when reviewing Java Full Stack projects.
+---
+
+## 📄 License
+
+This project is developed for **educational, learning, and portfolio purposes**.
